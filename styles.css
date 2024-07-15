@@ -1,0 +1,469 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #004b8d;
+  color: #ffffff;
+}
+.navbar {
+  background-color: #004b8d;
+}
+.navbar-nav {
+  flex-grow: 1;
+  justify-content: center;
+}
+.nav-item {
+  position: relative;
+  margin: 0 10px;
+}
+.nav-item a {
+  color: #ffffff !important;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: block;
+  padding: 10px 15px;
+  background-color: #004b8d;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+.nav-item a:hover {
+  background-color: #002e5b;
+}
+.nav-item a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ffc107;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+.nav-item a:hover::after,
+.nav-item a.active::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+.nav-item.dropdown .nav-link {
+  position: relative;
+}
+.nav-item.dropdown .nav-link i {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+}
+.dropdown-menu {
+  display: none;
+}
+.navbar-nav.ml-auto {
+  margin-left: auto;
+}
+.social-icons {
+  margin-left: auto;
+}
+.social-icons a {
+  color: #004b8d;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+.social-icons a:hover {
+  background-color: #004b8d;
+  color: #ffffff;
+  font-weight: bold;
+}
+.container {
+  position: relative;
+  max-width: 100%;
+  padding: 0 30px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  max-width: 28%;
+}
+
+.center-card {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  max-width: 43%;
+}
+
+.left-card,
+.center-card,
+.right-card {
+  background-color: #004b8d;
+  padding: 20px;
+  border: 3px solid #ffdda1;
+  height: 450px;
+  border-radius: 25px;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+.random-picks-btn {
+  background-color: white;
+  border: none;
+  font-size: 1.2rem;
+  padding: 8px 30px;
+  transition: background-color 0.3s ease;
+  color: #294fc4;
+  position: relative;
+  overflow: visible;
+  text-align: center;
+  display: inline-block;
+  margin: 20px 10px;
+  font-weight: bolder;
+}
+.play-now-btn,
+.spin-btn {
+  background-color: white;
+  border: none;
+  font-size: 1.2rem;
+  padding: 8px 30px;
+  transition: background-color 0.3s ease;
+  color: #294fc4;
+  position: relative;
+  overflow: visible;
+  text-align: center;
+  display: inline-block;
+  margin: 20px 10px;
+  font-weight: bolder;
+  border-radius: 15px;
+}
+
+.play-now-btn:hover,
+.spin-btn:hover {
+  background-color: #004b8d;
+  color: #ffffff;
+}
+.random-picks-btn:hover {
+  background-color: #901818;
+  color: #ffffff;
+  font-weight: bold;
+}
+.play-now-btn::before,
+.play-now-btn::after,
+.spin-btn::before,
+.spin-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 2px;
+  background-color: #ffffff;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.play-now-btn::before,
+.spin-btn::before {
+  left: -70px;
+}
+
+.play-now-btn::after,
+.spin-btn::after {
+  right: -70px;
+}
+
+.random-picks-btn {
+  background-color: #ff0000;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.number-input {
+  width: 15%;
+  text-align: center;
+  margin: 0 2px;
+}
+
+.odds-btn {
+  background-color: #fdf6cc;
+  color: #00008b;
+  font-weight: bolder;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.odds-btn:hover {
+  background-color: #00008b;
+  color: #ffffff;
+}
+.draw-section {
+  background-color: #e3e3e3;
+  padding: 40px 0;
+}
+
+.draw-card {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  color: #000;
+  padding-bottom: 60px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+
+.draw-card .draw-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.draw-card img {
+  width: 100%;
+  height: auto;
+}
+
+.draw-card h3 {
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+
+.draw-card p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.draw-card .btn {
+  background-color: #1e90ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+}
+
+.draw-card .btn:hover {
+  background-color: #104e8b;
+}
+
+.draw-card .btn::before,
+.draw-card .btn::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background-color: #000;
+  margin: 0 10px;
+}
+
+.draw-card .top-right-text {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.draw-card .exclamation-circle {
+  background-color: #ffd700;
+  color: #000;
+  padding: 5px;
+  border-radius: 50%;
+  margin-left: 5px;
+  font-size: 0.8rem;
+}
+
+.trapezium {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(135deg, #0045d0 0%, #002a6e 100%);
+  margin: 20px 0;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.draw-card[data-color="green"] {
+  background-color: #32cd32;
+  color: #fff;
+}
+
+.draw-card[data-color="orange"] {
+  background-color: #ffa500;
+  color: #fff;
+}
+
+.draw-card[data-color="purple"] {
+  background-color: #800080;
+  color: #fff;
+}
+
+.draw-card[data-color="yellow"] {
+  background-color: #ffd700;
+  color: #000;
+}
+
+footer {
+  background-color: #00008b;
+  color: #ffffff;
+  padding: 40px 0;
+  font-family: "Arial", sans-serif;
+}
+
+footer .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+footer .footer-content .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+footer .col-md-4 {
+  padding: 10px;
+}
+
+footer h4 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: #ffd700;
+  border-bottom: 2px solid #ffffff;
+  display: inline-block;
+  padding-bottom: 5px;
+  font-weight: bolder;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.full-width-line {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+}
+
+footer .legal {
+  font-size: 0.8rem;
+}
+
+footer .legal .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .legal img {
+  margin-right: 10px;
+}
+
+footer .legal span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+footer .socials {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+footer .socials a {
+  color: #ffffff;
+  background-color: #00008b;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 5px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+footer .socials a:hover {
+  background-color: #ffffff;
+  color: #00008b;
+}
+
+footer .legal .gamble {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: 2px solid #ffffff;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+footer .legal .gamble img {
+  margin-right: 10px;
+}
+
+footer .legal .gamble span {
+  color: #ffd700;
+}
+
+footer .legal .row.mt-3 {
+  border-top: 2px solid #ffffff;
+  padding-top: 20px;
+}
